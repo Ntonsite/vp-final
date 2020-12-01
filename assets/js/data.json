@@ -1,0 +1,191 @@
+[
+	{
+		"name":"Armando",
+		"description":"Chief Executive Officer",
+		"number":"330"
+	},
+	{
+		"name":"FAUSTINE MWIZARUBI / CHARLES CHACHA",
+		"description":"HEAD OF INTERNAL AUDIT / CHIEF RISK OFFICER",
+		"number":"121"
+	},
+	{
+		"name":"BEATRICE TEMBA / ZUBERI JUMA / LUCY BUNDALA / FRANK MAKASO / JASPER MNGULU / MARYCIANA MATABA / MICHAEL GERVAS",
+		"description":"INTERNAL AUDIT DEPARTMENT / RISK OFFICE",
+		"number":"216"
+	},
+	{
+		"name":"Julius Ruwachi",
+		"description":"Chief Finance Officer / CFO",
+		"number":"129"
+	},
+	{
+		"name":"ELIFERA KILEO / SYLIVIA CHRIZESTOM / ELIUD WILLIAM",
+		"description":"Micro & Agro Lending Department ",
+		"number":"128"
+	},
+	{
+		"name":"ALLEY MTATYA / SIJAONA SIMON / MAGDALENA KIJUU ",
+		"description":"MARKETING UNIT",
+		"number":"211"
+	},
+	{
+		"name":"VIOLA MLAWI / JUNEVAL RWEGASIRA / NICTAGON AMON / STANLEY NYAMLE / SYLIVESTER MULOKOZI / PATRIC KAHESHI",
+		"description":"LEGAL DEPARTMENT",
+		"number":"317"
+	},
+	{
+		"name":"Iman Ayoub",
+		"description":"EXECUTIVE ASSISTANT TO CEO",
+		"number":"201"
+	},
+	{
+		"name":"VICTOR NYAKI / PHILBERT MBOGORO / TOP KASORO / SIMON MLENGE",
+		"description":"HEAD OF SME AND SME COORDINATOR",
+		"number":"114"
+	},
+	{
+		"name":"ESTER BUKWIMBA / JUDITH SAJI / FLORENCE MACHANGO / MUJUNI BATAO / HALIMA MACHELA / JACKLINE MASAKI / SAFINA KANDURU / DAVID URASSA",
+		"description":"HUMAN RESOURCE DEPARTMENT / HR",
+		"number":"250"
+	},
+	{
+		"name":"Tajinder Singh /Joseph Nyamonge / Victoria Fridoline / Evancs Oisso",
+		"description":"ACCOUNTING AND FINANCE, MIDDLE OFFICE MANAGER",
+		"number":"321"
+	},
+	{
+		"name":"ISAYA MWENISONGOLE / GRACE METTA / ERIC LUYANGI / DAVID MBEBA",
+		"description":"EXECUTIVE MANAGER AND MIDDLE OFFICE",
+		"number":"130"
+	},
+	{
+		"name":"ANITHA MSANGI / ELIBARIKI SANDY / IMMACULATA NDITI / FRANK NSATO",
+		"description":"ADMINISTRATION DEPARTMENT",
+		"number":"217/218"
+	},
+	{
+		"name":"BENSON MINJA / DISMAS AMOS / GLORY NGOWI / ANTHONIA JAMES / EMMANUEL MARIKI / CHANGE LUBANZIBWA /NELSON MAIMU",
+		"description":"ACCOUNTING DEPARTMENT",
+		"number":"325"
+	},{
+		"name":"HASSAN LITEGA / IMELDA SANGA",
+		"description":"ACCOUNTING DEPARTMENT",
+		"number":"172"
+	},
+	{
+		"name":"JONES MRUSHA",
+		"description": "DEPUTY CHIEF INFORMATION OFFICER / IT",
+		"number":"111"
+	},
+	{
+		"name":"NAYAN GOPAL",
+		"description": "HEAD OF IT",
+		"number":"140"
+	},
+	{
+		"name":"ANNASTELLA KILLAJA",
+		"description": "BUSINESS INFORMATION SECURITY MANAGER",
+		"number":"130"
+	},
+	{
+		"name":"CLEMENTINA MWANJELA",
+		"description": "BUSINESS INFORMATION SECURITY OFFICER",
+		"number":"130"
+	},
+	{
+		"name":"NOEL LUSUVA / AMANI MTAE",
+		"description": "NETWORK TEAM / IT",
+		"number":"101"
+	},
+	{
+		"name":"GILBERT OKELLO",
+		"description": "SERVICE DELIVERY EXPERT / IT",
+		"number":"144"
+	},
+	{
+		"name":"NTONSITE MWAMLIMA",
+		"description": "SOFTWARE DEVELOPER / IT",
+		"number":"144"
+	},
+	{
+		"name":"EMMANUEL KITILLAH / MAGUNI EDWIN / ASSA CHARLES",
+		"description": "APPLICATION ADMINISTRATORS",
+		"number":"144"
+	},
+	{
+		"name":"JESSE MIHAYO",
+		"description": "IT SUPPORT TEAM / DESKTOP",
+		"number":"105"
+	},
+	{
+		"name":"ANTHONY FERNANDES",
+		"description": "SERVER INFRASTRUCTURE MANAGER",
+		"number":"105"
+	},
+	{
+		"name":"EDWIN MOSHA",
+		"description": "SENIOR IT SUPPORT SPECIALIST",
+		"number":"105"
+	},
+	{
+		"name":"GEOFREY RWECHENGULA",
+		"description": "CASHIERS",
+		"number":"204/205"
+	},
+	{
+		"name":"DOMINIC NOMBO/ GODFREY MWAMBETE / HAPPINESS LEMA",
+		"description": "CREDIT",
+		"number":"211"
+	},
+	{
+		"name":"CHARLES ALPHONCE",
+		"description": "BRANCH MANAGER",
+		"number":"203"
+	},
+	{
+		"name":"BAHATI DERUA",
+		"description": "CUSTOMER SERVICE",
+		"number":"207"
+	},
+	{
+		"name":"GROUND FLOOR",
+		"description": "RECEPTION",
+		"number":"118"
+	},
+	{
+		"name":"COMITEE ROOM",
+		"description": "GROUND",
+		"number":"213"
+	},
+	{
+		"name":"AMANI ABADI",
+		"description": "SENIOR BANKING SERVICE OFFICER",
+		"number":"208"
+	},
+	{
+		"name":"AMINA CHURY / BEATRICE LUNAGA / CATHERINE MGAYA / ELIAS GACHU / ORESTA FABIAN",
+		"description": "CUSTOMER SUPPORT CENTER",
+		"number":"125"
+	},
+	{
+		"name":"MARY MANGU / NICHOLAUS MAKUNZA / ISAAC MALABA / MARYCIANA LABAN / NAMARA LWEBANDIZA",
+		"description": "BANKING (RETAIL AND CORPORATE)",
+		"number":"105"
+	},
+	{
+		"name":"ANDREA OTTINA / ENOCK KIPWATE /BAHATI MKISI / AMINA MGALLA / GODLISTEN MOSHI / MICHAEL FRATERNE",
+		"description": "BUSINESS DEVELOPMENT DEPARTMENT",
+		"number":"215"
+	},
+	{
+		"name":"ASMATH NURU / ELINENGASIA SHAYO / LEAH KAOLE / SNOW KAGANDA",
+		"description": "MOBILE BANKING",
+		"number":"107"
+	},
+	{
+		"name":"ANDREW LUKANDAMILA / ZAKHIA ALLY / EDITH GEDI / MWASHUMU HAJI / AMINA KISAKA / STELLA BENJAMIN / DOMITILA MANG'ODI",
+		"description": "BACK OFFICE",
+		"number":"116"
+	}
+]
