@@ -62,6 +62,8 @@
         </tr>
         </thead>
         <tbody>
+		<?php $portal = $this->session->userdata('group'); ?>
+		<?php $role   = $this->session->userdata('role'); ?>
         <?php if (!empty($attachments)) {
             foreach($attachments as $row) {?>
                 <tr>
@@ -70,8 +72,19 @@
                     <td><?php echo $row->v_name; ?></td>
 
                     <td><a class="btn btn-sm btn-primary" href="<?php echo base_url('uploads/attachments');?>/<?php echo $row->file;?>">View</a>
-                        <a class="btn btn-sm btn-warning" href="<?php echo site_url('attachment/edit');?>/<?php echo $row->id_attach;?>">Edit</a>
-                        <a onClick="javascript: return confirm('Please confirm deletion');" class="btn btn-sm btn-danger" href="<?php echo site_url('attachment/delete');?>/<?php echo $row->id_attach;?>">Delete</a></td>
+						<?php
+				          if ($portal == 3 || $role ==1) {
+							  ?>
+							  <a class="btn btn-sm btn-warning"
+								 href="<?php echo site_url('attachment/edit'); ?>/<?php echo $row->id_attach; ?>">Edit</a>
+							  <a onClick="javascript: return confirm('Please confirm deletion');"
+								 class="btn btn-sm btn-danger"
+								 href="<?php echo site_url('attachment/delete'); ?>/<?php echo $row->id_attach; ?>">Delete</a>
+							  <?php
+						  }
+
+						?>
+					</td>
                 </tr>
             <?php }
         } ?>

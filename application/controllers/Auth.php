@@ -28,7 +28,7 @@ class Auth extends CI_Controller
 		// read the form fields, lowercase the username for neatness
 		$username = strtolower($this->input->post('user_name'));
 
-		$password = md5($this->input->post('user_password'));
+		$password = sha1($this->input->post('user_password'));
 		
 		$data = $this->auth_ad->login($username, $password);
 		$localUser = $this->User_model->check_local_user($username);
@@ -43,6 +43,7 @@ class Auth extends CI_Controller
 			$this->session->set_userdata('logged_in');
 
 			$this->session->set_userdata('role', $localUser['role']);
+			$this->session->set_userdata('group', $localUser['groups']);
 
 			// Redirects where a user should go after loggedIn after session Role identified
 			

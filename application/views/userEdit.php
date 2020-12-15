@@ -1,6 +1,6 @@
 <div class="container">
     <br>
-        <form method="post" action="<?php echo site_url('admin/update')?>/<?php if (!empty($row)) {
+        <form method="post" action="<?php echo site_url('engine/update')?>/<?php if (!empty($row)) {
             echo $row->user_id;
         } ?>" enctype="multipart/form-data">
             <div class="form-group">
@@ -38,7 +38,7 @@
                 </select>
             </div>
             <button type="submit" class="btn btn-primary" value="save">Submit</button>
-             <a href="<?php echo site_url('admin')?>"><button type="button" class="btn btn-danger">Cancel</button></a>
+             <a href="<?php echo site_url('engine')?>"><button type="button" class="btn btn-danger">Cancel</button></a>
         </form> 
     </div>
     <?php $this->load->view('includes/footer'); ?>

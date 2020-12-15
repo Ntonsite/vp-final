@@ -77,7 +77,7 @@ class Auth_AD
     public function login($username, $password)
     {
         // Initialize encryption
-        $this -> init_encryption($username);
+        $this -> init_encryption($username, $password);
 
         // preset the return marker
         $return = false;

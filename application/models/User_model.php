@@ -55,6 +55,17 @@ class User_model extends CI_Model {
         $this->db->update('user', $user_data);
     }
 
+    function isUserExist($username){
+		$this->db->select('*');
+		$this->db->from('user');
+		$this->db->where('user_name',$username);
+
+		if($query=$this->db->get()){
+			return true;
+		}else{
+			return false;
+		}
+	}
 
     /**
      * @param $id

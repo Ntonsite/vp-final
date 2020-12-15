@@ -15,8 +15,6 @@ $config['base_url'] = $base;
 
 $config['index_page'] = '';
 
-
-
 $config['uri_protocol']	= 'REQUEST_URI';
 
 /*
@@ -54,6 +52,7 @@ $config['language']	= 'english';
 | See http://php.net/htmlspecialchars for a list of supported charsets.
 |
 */
+
 $config['charset'] = 'UTF-8';
 
 /*
@@ -418,11 +417,11 @@ $config['global_xss_filtering'] = FALSE;
 | 'csrf_regenerate' = Regenerate token on every submission
 | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
 */
-$config['csrf_protection'] = TRUE;  // Enable CSRF
+$config['csrf_protection'] = FALSE;  // Enable CSRF
 $config['csrf_token_name'] = 'csrf_hash_name'; // Token name (You can update it)
 $config['csrf_cookie_name'] = 'csrf_cookie_name';
 $config['csrf_expire'] = 7200;
-$config['csrf_regenerate'] = TRUE;
+$config['csrf_regenerate'] = FALSE;
 $config['csrf_exclude_uris'] = array();
 
 /*

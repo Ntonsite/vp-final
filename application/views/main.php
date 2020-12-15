@@ -16,7 +16,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="<?php echo site_url('admin/create')?>" enctype="multipart/form-data">
+                    <form method="post" action="<?php echo site_url('engine/create')?>" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Username</label>
                             <input required="" type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Add username">
@@ -42,7 +42,7 @@
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary" value="save">Submit</button>
-                        <a href="<?php echo site_url('admin')?>"><button type="button" class="btn btn-danger">Cancel</button></a>
+                        <a href="<?php echo site_url('engine')?>"><button type="button" class="btn btn-danger">Cancel</button></a>
                     </form>
                 </div>
             </div>
@@ -64,10 +64,10 @@
                 <tr>
                     <th scope="row"><?php echo $row->user_id; ?></th>
                     <td><?php echo $row->user_name; ?></td>
-                    <th scope="row"><?php if($row->role==1){echo "Admin";}else{echo "Member";} ?></th>
+                    <th scope="row"><?php if($row->role==1){echo "engine";}else{echo "Member";} ?></th>
                     <th scope="row"><?php if($row->is_active==1){echo "Active";}else{echo "Not Active";} ?></th>
-                    <td><a class="btn btn-sm btn-warning" href="<?php echo site_url('Admin/edit');?>/<?php echo $row->user_id;?>">Edit</a>
-                        <a onClick="javascript: return confirm('Please confirm deletion');" class="btn btn-sm btn-danger" href="<?php echo site_url('Admin/delete');?>/<?php echo $row->user_id;?>">Delete</a></td>
+                    <td><a class="btn btn-sm btn-warning" href="<?php echo site_url('engine/edit');?>/<?php echo $row->user_id;?>">Edit</a>
+                        <a onClick="javascript: return confirm('Please confirm deletion');" class="btn btn-sm btn-danger" href="<?php echo site_url('engine/delete');?>/<?php echo $row->user_id;?>">Delete</a></td>
                 </tr>
             <?php }
         } ?>

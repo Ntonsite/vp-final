@@ -11,6 +11,9 @@ class Alert extends CI_Controller{
 		$this->load->model('license_model');
 	}
 
+	/**
+	 * SMTP options parameters
+	 */
 	public function index(){
 		$mail = $this->phpmailer_lib->load();
 		$mail->SMTPOptions = array(
@@ -39,8 +42,12 @@ class Alert extends CI_Controller{
 		$mail->isHTML(true);
 
 		// Send email
-		$contract = $this->contract_model->contract_expiry();
-		$license = $this->license_model->license_expiry();
+		if (!empty($this->contract_model)) {
+			$contract = $this->contract_model->contract_expiry();
+		}
+		if (!empty($this->license_model)) {
+			$license = $this->license_model->license_expiry();
+		}
 
         if (!empty($license)) {
             foreach ($license as $row){
