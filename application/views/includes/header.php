@@ -68,6 +68,9 @@
 						<a class="nav-link" href="<?php echo site_url('users') ?>">Users</a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link" href="<?php echo site_url('audit') ?>">Audit</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" href="<?php echo site_url('group') ?>">Groups</a>
 					</li>
 					<li class="nav-item">

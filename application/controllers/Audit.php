@@ -10,12 +10,17 @@ class Audit extends CI_Controller
 	public function __construct()
 	{
 		parent:: __construct();
-		$this->load->model('User_model');
-		$this->load->model('Group_model');
-		$this->load->model('Role_model');
+		$this->load->model('audit_model');
+
 		$this->load->library('session');
+
+		//session capturing
+		$data['id'] = $this->session->userdata('user_id');
+		$this->load->view('includes/header', $data);
 	}
 	public function index(){
-		echo "all set";
+		$data['result'] = $this->audit_model->getAudits();
+
+		$this->load->view('audit', $data);
 	}
 }
