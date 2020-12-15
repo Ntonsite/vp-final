@@ -116,4 +116,8 @@ class Auth extends CI_Controller
             }
         }
 	}
+
+	public function restrict(){
+		$this->load->view('restricted');
+	}
 }

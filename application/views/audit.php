@@ -1,10 +1,18 @@
 <?php require_once('includes/lock.php'); ?>
+
+<?php
+$portal = $this->session->userdata('role');
+
+if($portal == 2){
+	redirect('restricted');
+}
+?>
 <div class="container">
 	<br>
 	<!-- Button trigger modal -->
 
 	<table id="dataload" class="table table-striped table-hover table-responsive-md">
-		<thead class="thead-dark">
+		<thead class="thead-light">
 		<tr>
 			<th scope="col">#</th>
 			<th scope="col">Event</th>
