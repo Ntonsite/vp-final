@@ -5,8 +5,10 @@
 */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Contract extends CI_Controller{
-    public function __construct() {
+class Contract extends CI_Controller
+{
+    public function __construct()
+	{
         parent:: __construct();
         $this->load->database();
         $this->load->model('Contract_model');

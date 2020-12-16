@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2020 at 08:39 AM
+-- Generation Time: Dec 16, 2020 at 09:16 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.0.31
 
@@ -161,7 +161,10 @@ CREATE TABLE `groups` (
 
 INSERT INTO `groups` (`id`, `name`) VALUES
 (1, 'IT'),
-(2, 'LEGAL');
+(2, 'LEGAL'),
+(3, 'ADMIN'),
+(4, 'Audit Team'),
+(5, 'Audit');
 
 -- --------------------------------------------------------
 
@@ -262,9 +265,42 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_name`, `user_password`, `role`, `is_active`, `groups`) VALUES
-(2, 'admin', '50387fcd08daefcc1719ced928b9af67', 2, 1, NULL),
 (3, 'vendorad', '6ae28a55456b101be8261e5dee44cd3e', 2, 1, '2'),
-(6, 'nmwamlima', '50387fcd08daefcc1719ced928b9af67', 1, 1, '1');
+(6, 'nmwamlima', 'c3beeb5c6dbbc21234d12ebdb4d13b6aae896777', 1, 1, '1'),
+(7, 'take', 'dcbfc670ca2c09e2d709c89565d97b76', 1, 1, '1'),
+(8, 'note', 'dcbfc670ca2c09e2d709c89565d97b76', 1, 1, '1'),
+(9, 'yeye', 'dcbfc670ca2c09e2d709c89565d97b76', 1, 1, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_audit_trails`
+--
+
+CREATE TABLE `user_audit_trails` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `event` enum('insert','update','delete') NOT NULL,
+  `table_name` varchar(128) NOT NULL,
+  `old_values` text,
+  `new_values` text NOT NULL,
+  `url` varchar(255) NOT NULL,
+  `name` varchar(128) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `user_agent` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user_audit_trails`
+--
+
+INSERT INTO `user_audit_trails` (`id`, `user_id`, `event`, `table_name`, `old_values`, `new_values`, `url`, `name`, `ip_address`, `user_agent`, `created_at`) VALUES
+(1, 6, 'insert', 'groups', NULL, '{\"name\":\"Audit Team\"}', 'group/createGroup', '', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0', '2020-12-15 07:38:12'),
+(2, 6, 'update', 'groups', '{\"name\":\"Audit Team\"}', '{\"name\":\"Audit\"}', 'group/update/5', '', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0', '2020-12-15 07:38:57'),
+(3, 6, 'insert', 'user', NULL, '{\"user_name\":\"take\",\"role\":\"1\",\"groups\":\"1\"}', 'engine/create', '', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0', '2020-12-15 10:55:18'),
+(4, 6, 'insert', 'user', NULL, '{\"user_name\":\"note\",\"role\":\"1\",\"groups\":\"1\"}', 'engine/create', '', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0', '2020-12-15 10:56:16'),
+(5, 6, 'insert', 'user', NULL, '{\"user_name\":\"yeye\",\"role\":\"1\",\"groups\":\"1\"}', 'engine/create', '', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:84.0) Gecko/20100101 Firefox/84.0', '2020-12-15 10:59:56');
 
 -- --------------------------------------------------------
 
@@ -426,6 +462,12 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`);
 
 --
+-- Indexes for table `user_audit_trails`
+--
+ALTER TABLE `user_audit_trails`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `vendor`
 --
 ALTER TABLE `vendor`
@@ -457,7 +499,7 @@ ALTER TABLE `contract`
 -- AUTO_INCREMENT for table `groups`
 --
 ALTER TABLE `groups`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `license`
@@ -475,7 +517,13 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `user_audit_trails`
+--
+ALTER TABLE `user_audit_trails`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `vendor`

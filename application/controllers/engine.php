@@ -18,7 +18,8 @@ class engine extends CI_Controller {
 
 	public function index() {
 
-        $data['result'] = $this->User_model->getUsers();
+		$id  = $this->session->userdata('user_id');
+        $data['result'] = $this->User_model->getUsers($id);
         $data['role'] = $this->Role_model->getRoles();
         $data['group'] = $this->Group_model->getGroups();
         $this->load->view('includes/header');
@@ -33,9 +34,8 @@ class engine extends CI_Controller {
             'groups'=> $this->input->post('group')
         );
 
-        if(!$this->User_model->isUserExist($username)){
+        if($this->User_model->createData($user_data)){
 
-			$this->User_model->createData($user_data);
 			$this->session->set_flashdata('fail_user','fail');
 			redirect("engine");
 		}else{

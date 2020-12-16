@@ -15,7 +15,6 @@ class User_model extends CI_Model {
     /**
      * @param $user_data
      */
-
     function createData($user_data){
         $this->db->insert('user', $user_data);
     }
@@ -24,8 +23,8 @@ class User_model extends CI_Model {
      * @return mixed
      */
 
-    function getUsers(){
-        $query = $this->db->query('SELECT * FROM user where role != 1');
+    function getUsers($id){
+        $query = $this->db->query('SELECT * FROM user where user_id != '.$id);
         return $query->result();
     }
 
@@ -125,4 +124,5 @@ class User_model extends CI_Model {
         $this->db->where('user_id', $id);
         $this->db->update('status', 0);
     }
+
 }

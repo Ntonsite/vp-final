@@ -1,6 +1,7 @@
 <?php
 /*
  * Audit Controller fetch audit data and display it into restricted view
+ * @Author Ntonsite Mwamlima
  */
 
 defined('BASEPATH') OR exit('No direct script access allowed');
